@@ -1,0 +1,25 @@
+# NOTE: google.colab is pre-installed inside Google Colab only and
+# cannot be pip-installed outside of that environment. This code
+# must be run in Google Colab (or google.colab must be mocked/removed
+# for local execution).
+
+# Core deep learning / model libraries
+torch
+transformers
+accelerate
+bitsandbytes>=0.46.1
+sentencepiece
+peft
+datasets
+
+# Data handling & evaluation
+pandas
+numpy
+scikit-learn
+
+# Progress bar
+tqdm
+
+# Plotting
+matplotlib
+seaborn
