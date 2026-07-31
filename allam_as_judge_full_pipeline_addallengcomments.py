@@ -3320,7 +3320,8 @@ def get_few_shot_prompt(claim):
 
 print('✅ Prompt defined!')
 print('\nExample:')
-print(get_few_shot_prompt('برج إيفل يقع في باريس')[:300] + '...')
+print(get_few_shot_prompt('برج إيفل يقع في باريس')[:300] + '...') 
+#The Eiffel Tower is located in Paris
 
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
@@ -3427,6 +3428,12 @@ def judge_claim(claim):
     if re.search(r"صحيح[ةه]?", completion): return "العبارة صحيحة"  # matched Arabic word for 'correct' -> returns 'العبارة صحيحة' (the statement is correct)
     if re.search(r"خاط[ئئ][ةه]?", completion): return "العبارة خاطئة"  # matched Arabic word for 'incorrect' -> returns 'العبارة خاطئة' (the statement is incorrect)
     return "unknown"
+
+#test:
+#Riyadh is the capital of Saudi Arabia
+#Cairo is the capital of Saudi Arabia
+#The Eiffel Tower is located in Paris
+#The Earth revolves around the Moon
 
 tests = [
     'الرياض هي عاصمة المملكة العربية السعودية',
@@ -3700,6 +3707,13 @@ def judge_claim(claim):
     if re.search(r"صحيح[ةه]?", completion): return "العبارة صحيحة"  # matched Arabic word for 'correct' -> returns 'العبارة صحيحة' (the statement is correct)
     if re.search(r"خاط[ئئ][ةه]?", completion): return "العبارة خاطئة"  # matched Arabic word for 'incorrect' -> returns 'العبارة خاطئة' (the statement is incorrect)
     return "unknown"
+
+
+#test:
+#Riyadh is the capital of Saudi Arabia
+#Cairo is the capital of Saudi Arabia
+#The Eiffel Tower is located in Paris
+#The Earth revolves around the Moon
 
 tests = [
     'الرياض هي عاصمة المملكة العربية السعودية',
